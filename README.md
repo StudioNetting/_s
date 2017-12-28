@@ -1,9 +1,6 @@
 netting, from _s :)
 ===
 
-Getting Started
----------------
-
 If you want to keep it simple, head over to https://underscores.me and generate your `_s` based theme from there.
 
 If you want to set things up manually then you'll need to do a five-step find and replace on the name in all the templates.
