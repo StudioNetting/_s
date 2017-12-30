@@ -24,9 +24,6 @@ if ( ! function_exists( 'netting_setup' ) ) :
 		 */
 		load_theme_textdomain( 'netting', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
-
 		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
@@ -44,7 +41,7 @@ if ( ! function_exists( 'netting_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'netting' ),
+			'primary' => esc_html__( 'Primary', 'netting' ),
 		) );
 
 		/*
@@ -118,9 +115,7 @@ add_action( 'widgets_init', 'netting_widgets_init' );
  */
 function netting_scripts() {
 	wp_enqueue_style( 'netting-style', get_stylesheet_uri() );
-
 	wp_enqueue_script( 'netting-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'netting-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
