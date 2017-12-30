@@ -1,8 +1,8 @@
 <?php
 /**
- * _s Theme Customizer
+ * netting Theme Customizer
  *
- * @package _s
+ * @package netting
  */
 
 /**

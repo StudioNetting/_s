@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package _s
+ * @package netting
  */
 
 if ( ! function_exists( 'netting_posted_on' ) ) :
