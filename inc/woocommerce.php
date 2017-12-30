@@ -34,6 +34,46 @@ add_action( 'after_setup_theme', 'netting_woocommerce_setup' );
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 /**
+ * Remove all WooCommerce scripts and styles from all pages except from shop pages.
+ *
+ */
+function netting_woocommerce_script_cleaner() {
+	if (!is_woocommerce() && !is_cart() && !is_checkout()){
+		wp_dequeue_script('woocommerce'); // WooCommerce script
+		wp_dequeue_script('wc-add-payment-method'); // WooCommerce script
+		wp_dequeue_script('wc-lost-password'); // WooCommerce script
+		wp_dequeue_script('wc_price_slider'); // WooCommerce script
+		wp_dequeue_script('wc-single-product'); // WooCommerce script
+		wp_dequeue_script('wc-add-to-cart'); // WooCommerce script
+		wp_dequeue_script('wc-cart-fragments'); // WooCommerce script
+		wp_dequeue_script('wc-credit-card-form'); // WooCommerce script
+		wp_dequeue_script('wc-checkout'); // WooCommerce script
+		wp_dequeue_script('wc-add-to-cart-variation'); // WooCommerce script
+		wp_dequeue_script('wc-cart'); // WooCommerce script
+		wp_dequeue_script('wc-address-i18n'); // WooCommerce script
+		wp_dequeue_script('wc-country-select'); // WooCommerce script
+		wp_dequeue_script('wc-chosen'); // WooCommerce script
+		wp_dequeue_script('selectWoo'); // WooCommerce Select2 script
+		wp_dequeue_script('prettyPhoto'); // WooCommerce script
+		wp_dequeue_script('prettyPhoto-init'); // WooCommerce script
+		wp_dequeue_script('photoswipe'); // WooCommerce script
+		wp_dequeue_script('wcqi-js'); // WooCommerce script
+		wp_dequeue_script('jquery-cookie'); // WooCommerce script
+		wp_dequeue_script('jquery-blockui'); // WooCommerce script
+		wp_dequeue_script('jquery-placeholder'); // WooCommerce script
+		wp_dequeue_script('jquery-payment'); // WooCommerce script
+		wp_dequeue_script('fancybox'); // WooCommerce script
+		wp_dequeue_script('jqueryui'); // WooCommerce script
+		wp_dequeue_script('wc-add-extra-charges'); // plugins/woocommerce-extra-charges-to-payment-gateways/assets/app.js
+		wp_dequeue_script('wc-aelia-eu-vat-assistant-frontend'); // plugins/woocommerce-eu-vat-assistant/src/js/frontend/frontend.js
+		wp_dequeue_script('aws-script'); // plugins/advanced-woo-search/
+	}
+	wp_dequeue_style('wc-aelia-eu-vat-assistant-frontend'); // plugins/woocommerce-eu-vat-assistant/src/design/css/frontend.css
+	wp_dequeue_style('aws-style'); // plugins/advanced-woo-search/
+}
+add_action('wp_enqueue_scripts', 'netting_woocommerce_script_cleaner', 99);
+
+/**
  * Add 'woocommerce-active' class to the body tag.
  *
  * @param  array $classes CSS classes applied to the body tag.
