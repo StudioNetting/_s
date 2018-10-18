@@ -29,7 +29,7 @@
 		<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 
 		
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sn' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Meny', 'sn' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' 	=> 'menu-1',

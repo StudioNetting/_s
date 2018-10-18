@@ -19,7 +19,6 @@ function sn_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'sn_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
@@ -29,4 +28,13 @@ function sn_pingback_header() {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
+
+// Simply remove anything that looks like an archive title prefix ("Archive:", "Foo:", "Bar:").
+function sn_the_archive_title($title){
+	return preg_replace('/^\w+: /', '', $title);
+}
+
+add_filter( 'body_class', 'sn_body_classes' );
+add_filter('get_the_archive_title', 'sn_the_archive_title');
+
 add_action( 'wp_head', 'sn_pingback_header' );

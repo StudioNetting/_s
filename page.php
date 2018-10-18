@@ -17,11 +17,26 @@ get_header();
 
 <?php
 while ( have_posts() ) :
-	the_post();
+	the_post(); ?>
 
-	get_template_part( 'modules/content', 'page' );
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header>
+			<?php the_title( '<h1>', '</h1>' ); ?>
+		</header>
+	
+		<?php the_content(); ?>
+	
+		<footer>
+			<?php wp_link_pages( array(
+				'before' => '<div">' . esc_html__( 'Pages:', 'sn' ),
+				'after'  => '</div>',
+			) );
+			?>	
+		</footer>
+	
+	</article>
 
-	// If comments are open or we have at least one comment, load up the comment template.
+	<?php // If comments are open or we have at least one comment, load up the comment template.
 	if ( comments_open() || get_comments_number() ) :
 		comments_template();
 	endif;

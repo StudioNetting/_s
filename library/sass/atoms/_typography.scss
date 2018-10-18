@@ -2,8 +2,8 @@
 LOADING FONT FACES
 ******************************************************************/
 
- @font-face {
-    font-family: 'Latimpe';
+ /*@font-face {
+    font-family: 'sn';
     src: url('library/fonts/3754BB_0_0.eot');
     src: url('library/fonts/3754BB_0_0.eot?#iefix') format('embedded-opentype'),
          url('library/fonts/3754BB_0_0.woff') format('woff'),
@@ -14,7 +14,7 @@ LOADING FONT FACES
 } 
 
 @font-face {
-    font-family: 'Latimpe';
+    font-family: 'sn';
     src: url('library/fonts/3754BB_2_0.eot');
     src: url('library/fonts/3754BB_2_0.eot?#iefix') format('embedded-opentype'),
          url('library/fonts/3754BB_2_0.woff') format('woff'),
@@ -25,7 +25,7 @@ LOADING FONT FACES
 }
 
 @font-face {
-    font-family: 'Latimpe';
+    font-family: 'sn';
     src: url('library/fonts/3754BB_3_0.eot');
     src: url('library/fonts/3754BB_3_0.eot?#iefix') format('embedded-opentype'),
          url('library/fonts/3754BB_3_0.woff') format('woff'),
@@ -36,7 +36,7 @@ LOADING FONT FACES
 } 
 
 @font-face {
-    font-family: 'Latimpe-extra-bold';
+    font-family: 'sn-extra-bold';
     src: url('library/fonts/3754BB_1_0.eot');
     src: url('library/fonts/3754BB_1_0.eot?#iefix') format('embedded-opentype'),
          url('library/fonts/3754BB_1_0.woff') format('woff'),
@@ -44,11 +44,11 @@ LOADING FONT FACES
          url('library/fonts/3754BB_1_0.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 
-$sans-serif:        	"Latimpe", Verdana, sans-serif;
-$sans-serif-xbold:		"Latimpe-extra-bold", Verdana, sans-serif;
+$sans-serif:        	"sn", Verdana, sans-serif;
+$sans-serif-xbold:		"sn-extra-bold", Verdana, sans-serif;
 
 
 /******************************************************************

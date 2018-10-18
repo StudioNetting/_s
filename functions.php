@@ -46,22 +46,6 @@ if ( ! function_exists( 'sn_setup' ) ) :
 
 	}
 endif;
-add_action( 'after_setup_theme', 'sn_setup' );
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function sn_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	//$GLOBALS['content_width'] = apply_filters( 'sn_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'sn_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
@@ -69,15 +53,18 @@ add_action( 'after_setup_theme', 'sn_content_width', 0 );
 function sn_scripts() {
 	wp_enqueue_style( 'sn-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'sn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'sn-navigation', get_template_directory_uri() . '/library/js/min/navigation-min.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'sn-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'sn-skip-link-focus-fix', get_template_directory_uri() . '/library/js/min/skip-link-focus-fix-min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
+add_action( 'after_setup_theme', 'sn_setup' );
 add_action( 'wp_enqueue_scripts', 'sn_scripts' );
+
 
 /**
  * Custom template tags for this theme.
@@ -88,4 +75,14 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/theme-admin.php';
+
+/**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/theme-images.php';
 

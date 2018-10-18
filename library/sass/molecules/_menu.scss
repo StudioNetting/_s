@@ -1,7 +1,10 @@
 .menu{
 	//general styles of a menu
+	list-style: none;
+	padding-left: 0;
 	
 	.menu-item{
 		//styling of one item in the menu
+		display: inline;
 	}
 }

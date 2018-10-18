@@ -10,46 +10,51 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'sn' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
+	<header>
+		<h1>
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'modules/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'modules/content', 'none' );
-
-		endif;
+			/* translators: %s: search query. */
+			printf( esc_html__( 'Søkeresultat', 'sn' ));
+			?>
+			
+		</h1>
+		
+		<?php 
+		get_search_form(); 
+		global $wp_query;
+		
+		if( $wp_query->post_count == 1 ) {
+			$result_title .= '1 søkeresultat';
+		} else {
+			$result_title .= $wp_query->found_posts . ' søkeresultater';
+		}
+		
+		$result_title .= ' for <span>\'' . wp_specialchars($wp_query->query_vars['s'], 1) . '\'<span>';
+		
+		echo $result_title;
+	
 		?>
+		
+	</header>
 
-		</main>
-	</section>
+	<?php
+	/* Start the Loop */
+	while ( have_posts() ) :
+		the_post();
+		get_template_part( 'modules/featured', get_post_type() );
+
+	endwhile;
+
+	the_posts_navigation();
+
+else :
+
+	get_template_part( 'modules/content', 'none' );
+
+endif;
+?>
 
 <?php
-get_sidebar();
 get_footer();
