@@ -1,0 +1,16 @@
+/************************
+Default styling of lists	
+************************/
+ul, ol {
+	padding-left: 3em;
+	list-style-position: outside;
+	margin-top: 1.6em;
+	margin-bottom: 1.6em;
+	
+	li {
+		margin-bottom: 0.3em;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}

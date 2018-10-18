@@ -1,0 +1,73 @@
+/*!
+Theme Name: Studio Netting Starter Theme
+Theme URI: http://underscores.me/
+Author: Studio Netting
+Author URI: http://underscores.me/
+Description: Description
+Version: 0.0.1
+License: TODO
+License URI: TODO
+Text Domain: snst
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import "normalize";
+
+/*********************
+IMPORTING ATOMS
+
+TODO - må beskrives
+*********************/
+
+@import "atoms/accessibility";
+@import "atoms/colors";
+@import "atoms/buttons";
+@import "atoms/grid";
+@import "atoms/images";
+@import "atoms/links";
+@import "atoms/typography";
+@import "atoms/typography";
+
+
+/*********************
+IMPORTING MOLECULES
+
+TODO - må beskrives
+*********************/
+
+@import "molecules/background-colors";
+@import "molecules/lists";
+@import "molecules/logo";
+@import "molecules/menu";
+@import "molecules/text";
+
+
+/*********************
+IMPORTING ORGANISMS
+
+Organisms are reusable blocks or elements we use throughout the project.
+
+*********************/
+
+@import "organisms/featured-post";
+@import "organisms/site-footer";
+@import "organisms/site-header";
+@import "organisms/wysiwyg";
+
+/*********************
+IMPORTING PAGES
+
+TODO - må beskrives
+*********************/
+
+@import "pages/404";
+@import "pages/archive";
+@import "pages/page";
+@import "pages/single";
+@import "pages/front-page"; //must be after page since the front page is also a page
