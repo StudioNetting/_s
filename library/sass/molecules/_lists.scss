@@ -1,0 +1,54 @@
+/*********************
+DEFAULT UL- AND OL-LISTS	
+*********************/
+ul, ol {
+	padding-left: 3em;
+	list-style-position: outside;
+	margin-top: 1.6em;
+	margin-bottom: 1.6em;
+	
+	li {
+		margin-bottom: 0.3em;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*********************
+LIST WITH LINKS
+*********************/
+.linklist {
+	list-style: none;
+	padding: 0;
+	
+	li {
+		position: relative;
+		@extend .h3;
+		padding-left: 60px;
+		margin-bottom: 0.5em;
+		
+		&:before{
+			content:"";
+			display:inline-block;
+			background-image:url('../latimpe/library/images/linklist-icon.svg');
+			background-size:25px 15px;
+			background-repeat:no-repeat;
+			width:25px; 
+			height:20px;
+			vertical-align:middle;
+			position: absolute;
+			top: 2px;
+				
+			background-size:42px 25px;
+			width:50px; 
+			height:25px;
+			padding-right:30px; 
+			left: 0;
+		}
+		
+		a{
+			text-decoration: none;
+		}
+	}
+}

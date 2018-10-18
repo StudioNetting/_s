@@ -1,0 +1,22 @@
+.logo{
+	width: auto;
+	color: $white;
+	
+	width: 8em;
+	height: auto;
+	margin-top: 1.5rem;
+		
+	a{
+		color: $white;
+	}
+
+	@media (min-width: 768px){
+		margin-top: -1.3rem;
+	}
+
+}
+
+.full-text-logo{
+	width: 15em;
+	font-size: 18px;
+}

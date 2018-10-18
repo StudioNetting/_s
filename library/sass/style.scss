@@ -1,0 +1,86 @@
+/*!
+Theme Name: Latimpe
+Theme URI: https://www.latimpe.no/
+Author: Studio Netting
+Author URI: http://www.studionetting.no
+Description: Custom made theme for Latimpe. 
+Version: 1.0.0
+Text Domain: latimpe
+*/
+
+@import "normalize";
+
+/*********************
+IMPORTING ATOMS
+
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+
+@import "atoms/accessibility";
+@import "atoms/colors";
+@import "atoms/buttons";
+@import "atoms/grid";
+@import "atoms/images";
+@import "atoms/links";
+@import "atoms/typography";
+
+
+/*********************
+IMPORTING MOLECULES
+
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+
+@import "molecules/background-colors";
+@import "molecules/categories";
+@import "molecules/image";
+@import "molecules/lists";
+@import "molecules/lines";
+@import "molecules/load-more";
+@import "molecules/logo";
+@import "molecules/logo-full-text";
+@import "molecules/menu";
+@import "molecules/preamble";
+@import "molecules/section-title";
+@import "molecules/text";
+
+
+/*********************
+IMPORTING ORGANISMS
+
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+
+@import "organisms/article";
+@import "organisms/featured-post";
+@import "organisms/featured-announcement";
+@import "organisms/main-navigation";
+@import "organisms/site-footer";
+@import "organisms/site-header";
+@import "organisms/page-header";
+@import "organisms/wysiwyg";
+
+/*********************
+IMPORTING PAGES
+
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+
+@import "pages/404";
+@import "pages/archive";
+@import "pages/page";
+@import "pages/single";
+@import "pages/single-announcement"; 
+@import "pages/front-page"; //must be after page since the front page is also a page
