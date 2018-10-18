@@ -10,26 +10,26 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header>
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div>
 			<?php
 			sn_posted_on();
 			sn_posted_by();
 			?>
-		</div><!-- .entry-meta -->
+		</div>
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<?php sn_post_thumbnail(); ?>
 
-	<div class="entry-summary">
+	<div>
 		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	</div>
 
-	<footer class="entry-footer">
+	<footer>
 		<?php sn_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	</footer>
+</article>
