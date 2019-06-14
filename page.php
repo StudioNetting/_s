@@ -12,28 +12,16 @@
  * @package sn
  */
 
-get_header();
-?>
+get_header(); ?>
 
-<?php
-while ( have_posts() ) :
-	the_post(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header>
-			<?php the_title( '<h1>', '</h1>' ); ?>
+			<h1><?php the_title(); ?></h1>
 		</header>
 	
-		<?php the_content(); ?>
-	
-		<footer>
-			<?php wp_link_pages( array(
-				'before' => '<div">' . esc_html__( 'Pages:', 'sn' ),
-				'after'  => '</div>',
-			) );
-			?>	
-		</footer>
-	
+		<?php the_content(); ?>	
 	</article>
 
 	<?php // If comments are open or we have at least one comment, load up the comment template.

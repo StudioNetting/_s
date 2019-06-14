@@ -12,27 +12,22 @@
  * @package latimpe
  */
 
-get_header();
-?>
+get_header(); ?>
 
-<h1>
-	
-</h1>  
+<h1></h1>  
 
 <?php
- $args = array(
- 'post_type' => array('post', 'custom_post'),
- 'posts_per_page' => 10,
- 'posts_per_page' => 15,
- );
-
- $query = new WP_Query( $args );
-
- 	
-while ( $query->have_posts() ) : $query->the_post(); 
-	get_template_part( 'modules/featured', get_post_type()); 
-endwhile; 
- 
+	$args = array(
+		'post_type' => array('post', 'custom_post'),
+		'posts_per_page' => 10,
+		'posts_per_page' => 15,
+	);
+	
+	$query = new WP_Query( $args );
+	
+	while ( $query->have_posts() ) : $query->the_post(); 
+		get_template_part( 'modules/featured', get_post_type()); 
+	endwhile; 
 ?> 
 
 <?php

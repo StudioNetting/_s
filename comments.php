@@ -22,29 +22,16 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
+	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-			<?php
-			$sn_comment_count = get_comments_number();
-			if ( '1' === $sn_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'sn' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $sn_comment_count, 'comments title', 'sn' ) ),
-					number_format_i18n( $sn_comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
+			<?php $sn_comment_count = get_comments_number();
+				if ( '1' === $sn_comment_count ) {
+					echo __('Én kommentar på', 'sn'). ' ' .get_the_title();
+				} else {
+					echo $sn_comment_count. ' ' .__('kommentarer', 'sn'); 
+				} 
 			?>
-		</h2><!-- .comments-title -->
+		</h2>
 
 		<?php the_comments_navigation(); ?>
 
@@ -55,21 +42,18 @@ if ( post_password_required() ) {
 				'short_ping' => true,
 			) );
 			?>
-		</ol><!-- .comment-list -->
+		</ol>
 
 		<?php
 		the_comments_navigation();
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'sn' ); ?></p>
-			<?php
-		endif;
+		if ( ! comments_open() ) : ?>
+			<p class="no-comments"><?php echo __( 'Kommentarfeltet er stengt.', 'sn' ); ?></p>
+		<?php endif;
 
 	endif; // Check for have_comments().
 
-	comment_form();
-	?>
+	comment_form(); ?>
 
 </div><!-- #comments -->

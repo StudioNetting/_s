@@ -7,34 +7,28 @@
  * @package sn
  */
 
-get_header();
-?>
+get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
 
 	<header>
 		<h1>
-			<?php
-			/* translators: %s: search query. */
-			printf( esc_html__( 'Søkeresultat', 'sn' ));
-			?>
-			
+			<?php echo __('Søkeresultater:', 'sn'); ?>	
 		</h1>
 		
 		<?php 
-		get_search_form(); 
-		global $wp_query;
-		
-		if( $wp_query->post_count == 1 ) {
-			$result_title .= '1 søkeresultat';
-		} else {
-			$result_title .= $wp_query->found_posts . ' søkeresultater';
-		}
-		
-		$result_title .= ' for <span>\'' . wp_specialchars($wp_query->query_vars['s'], 1) . '\'<span>';
-		
-		echo $result_title;
-	
+			get_search_form(); 
+			global $wp_query;
+			
+			if( $wp_query->post_count == 1 ) {
+				$result_title .= '1 søkeresultat';
+			} else {
+				$result_title .= $wp_query->found_posts . ' søkeresultater';
+			}
+			
+			$result_title .= ' for <span>\'' . wp_specialchars($wp_query->query_vars['s'], 1) . '\'<span>';
+			
+			echo $result_title;
 		?>
 		
 	</header>

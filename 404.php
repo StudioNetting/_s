@@ -13,8 +13,8 @@ get_header();
 <section class="error-404 not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Oops, her må det ha skjedd en feil!', 'sn' ); ?></h1>
-	</header><!-- .page-header -->
-
+	</header>
+	
 	<div class="page-content">
 		<p><?php esc_html_e( 'Error 404: Vi kan ikke finne siden du leter etter. Dette kan skyldes at siden er flyttet, har fått ny adresse eller ikke finnes. Kanskje du finner siden ved et søk?', 'sn' ); ?></p>
 
@@ -25,7 +25,7 @@ get_header();
 		?>
 
 		<div class="widget widget_categories">
-			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'sn' ); ?></h2>
+			<h2 class="widget-title"><?php esc_html_e( 'Mest brukte kategorier:', 'sn' ); ?></h2>
 			<ul>
 				<?php
 				wp_list_categories( array(
@@ -37,18 +37,17 @@ get_header();
 				) );
 				?>
 			</ul>
-		</div><!-- .widget -->
+		</div>
 
-		<?php
-		/* translators: %1$s: smiley */
-		$sn_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'sn' ), convert_smilies( ':)' ) ) . '</p>';
-		the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$sn_archive_content" );
-
-		the_widget( 'WP_Widget_Tag_Cloud' );
-		?>
-
-	</div><!-- .page-content -->
-</section><!-- .error-404 -->
+		<div class="widget widget_archive">
+			<p><?php echo __('Du kan også lete gjennom månedlige arkiver:', 'sn'); ?></p>
+			<?php
+				the_widget( 'WP_Widget_Archives', 'dropdown=1' );
+				the_widget( 'WP_Widget_Tag_Cloud' );
+			?>
+		</div>
+	</div>
+</section>
 
 <?php
 get_footer();
