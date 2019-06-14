@@ -11,41 +11,24 @@
 
 <section class="no-results not-found">
 	<header>
-		<h1 ><?php esc_html_e( 'Nothing Found', 'sn' ); ?></h1>
+		<h1><?php echo__( 'Ingenting funnet', 'sn' ); ?></h1>
 	</header>
 
 	<div class="page-content">
-		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
+		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			printf(
-				'<p>' . wp_kses(
-					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'sn' ),
-					array(
-						'a' => array(
-							'href' => array(),
-						),
-					)
-				) . '</p>',
-				esc_url( admin_url( 'post-new.php' ) )
-			);
+			<p><?php echo __('Klar til å publisere din første post? ', 'sn'); ?><a href="<?php admin_url('post-new.php'); ?>"><?php echo __('Gå til innleggsredigering', 'sn');?></a></p>
 
-		elseif ( is_search() ) :
-			?>
+		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sn' ); ?></p>
-			<?php
-			get_search_form();
+			<p><?php echo __( 'Beklager, men vi kunne ikke finne noe som matcher søket ditt. Prøv igjen med andre søkeord.', 'sn' ); ?></p>
+			<?php get_search_form();
 
-		else :
-			?>
+		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'sn' ); ?></p>
-			<?php
-			get_search_form();
+			<p><?php echo __( 'Vi kan ikke finne det du leter etter. Prøv å søke.', 'sn' ); ?></p>
+			<?php get_search_form();
 
-		endif;
-		?>
+		endif; ?>
 	</div>
 </section>
