@@ -29,6 +29,12 @@ This theme includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.1 - June 14 2019 =
+* Further improvements:
+	- Separated HTML from PHP
+	- Added JS.file for simple mobile toggling menu
+	- Translated strings to Norwegian
+
 = 0.1 - May 18 2018 =
 * Setup of our own version of the starter theme
 
