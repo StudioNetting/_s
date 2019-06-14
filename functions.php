@@ -52,6 +52,9 @@ endif;
  */
 function sn_scripts() {
 	wp_enqueue_style( 'sn-style', get_stylesheet_uri() );
+	
+	wp_enqueue_script("jquery");
+	wp_enqueue_script( 'sn-script', get_template_directory_uri() . '/library/js/min/sn-min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'sn-navigation', get_template_directory_uri() . '/library/js/min/navigation-min.js', array(), '20151215', true );
 
@@ -67,22 +70,10 @@ add_action( 'wp_enqueue_scripts', 'sn_scripts' );
 
 
 /**
- * Custom template tags for this theme.
+ * Require Theme function files
  */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/theme-admin.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/theme-images.php';
+require get_template_directory() . '/library/files/template-tags.php';
+require get_template_directory() . '/library/files/template-functions.php';
+require get_template_directory() . '/library/files/theme-admin.php';
+require get_template_directory() . '/library/files/theme-images.php';
 
