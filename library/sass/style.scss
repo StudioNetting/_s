@@ -20,6 +20,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "normalize";
 
 /*********************
+IMPORTING ABSTRACT
+
+TODO - må beskrives
+*********************/
+
+@import "abstract/fonts";
+@import "abstract/mixins";
+
+/*********************
 IMPORTING ATOMS
 
 TODO - må beskrives
@@ -61,13 +70,13 @@ Organisms are reusable blocks or elements we use throughout the project.
 @import "organisms/wysiwyg";
 
 /*********************
-IMPORTING PAGES
+IMPORTING TEMPLATES
 
 TODO - må beskrives
 *********************/
 
-@import "pages/404";
-@import "pages/archive";
-@import "pages/page";
-@import "pages/single";
-@import "pages/front-page"; //must be after page since the front page is also a page
+@import "templates/404";
+@import "templates/archive";
+@import "templates/page";
+@import "templates/single";
+@import "templates/front-page"; //must be after page since the front page is also a page

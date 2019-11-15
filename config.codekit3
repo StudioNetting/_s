@@ -187,6 +187,32 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/library/sass/abstract/_fonts.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/sass/_fonts.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/library/sass/abstract/_mixins.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/library/sass/_mixins.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/library/sass/atoms/_accessibility.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -421,7 +447,20 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/library/sass/pages/_404.scss": {
+	"/library/sass/style.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/style.css",
+		"oF": 2,
+		"oS": 3,
+		"uL": 1
+		},
+	"/library/sass/templates/_404.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -434,7 +473,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/library/sass/pages/_archive.scss": {
+	"/library/sass/templates/_archive.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -447,7 +486,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/library/sass/pages/_front-page.scss": {
+	"/library/sass/templates/_front-page.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -460,7 +499,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/library/sass/pages/_page.scss": {
+	"/library/sass/templates/_page.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -473,7 +512,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/library/sass/pages/_single.scss": {
+	"/library/sass/templates/_single.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -483,19 +522,6 @@
 		"oA": 1,
 		"oAP": "/library/sass/_single.css",
 		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/library/sass/style.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/style.css",
-		"oF": 2,
 		"oS": 3,
 		"uL": 1
 		},
