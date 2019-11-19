@@ -21,19 +21,34 @@ function sn_admin_menu() {
 	
 	//remove_menu_page( 'edit-comments.php' ); 	//the theme does not use comments
 	
-	if (current_user_can('editor')) {
-		remove_menu_page( 'tools.php' );		//Tools
-		//remove_menu_page( 'ajax-load-more');    //plugin ajax load more
+	if (current_user_can('editor')) { //Remove options in menu for the editor role
+		remove_menu_page( 'tools.php' );						//Remove tools
+		//remove_menu_page( 'ajax-load-more');    				//Remove plugin ajax load more
+		remove_submenu_page( 'themes.php', 'themes.php' ); 		//Remove themes options
+		remove_submenu_page( 'themes.php', 'widgets.php' ); 	//Remove widgets
+	    remove_submenu_page( 'themes.php', 'customize.php' );	//Remove customize options
+	    global $submenu;
+	    unset($submenu['themes.php'][6]);
 		
 	}
 }
 
  /**
- * Add capabilites so editors can edit the menu.
+ * Change capabilities of the editor role
  */
 function sn_theme_caps(){  
 	$role = get_role("editor"); 
-	$role->add_cap( 'edit_theme_options' );	
+	$role->add_cap( 'edit_theme_options' ); //Edit menu
+	add_capability_edit_users($role); // Edit users
+}
+
+//Add ability to change, delete or add users
+function add_capability_edit_users($role){
+    $role->add_cap('edit_users');
+    $role->add_cap('list_users');
+    $role->add_cap('create_users');
+    $role->add_cap('add_users');
+    $role->add_cap('delete_users');
 }
 
 /**
