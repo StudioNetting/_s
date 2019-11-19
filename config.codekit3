@@ -187,7 +187,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/library/sass/abstract/_fonts.scss": {
+	"/library/sass/abstracts/_fonts.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -200,7 +200,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/library/sass/abstract/_mixins.scss": {
+	"/library/sass/abstracts/_mixins.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,

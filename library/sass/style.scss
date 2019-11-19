@@ -20,15 +20,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "normalize";
 
 /*********************
-IMPORTING ABSTRACT
-
-TODO - må beskrives
-*********************/
-
-@import "abstract/fonts";
-@import "abstract/mixins";
-
-/*********************
 IMPORTING ATOMS
 
 TODO - må beskrives
@@ -80,3 +71,12 @@ TODO - må beskrives
 @import "templates/page";
 @import "templates/single";
 @import "templates/front-page"; //must be after page since the front page is also a page
+
+/*********************
+IMPORTING ABSTRACTS
+
+TODO - må beskrives
+*********************/
+
+@import "abstracts/fonts";
+@import "abstracts/mixins";
