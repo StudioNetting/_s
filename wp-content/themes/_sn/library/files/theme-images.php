@@ -29,15 +29,14 @@ function sn_unset_wordpress_automatic_image_cropping(){
 	update_option('large_size_h', 0);
 	update_option('large_size_w', 0);
 }
+add_action('init', 'sn_unset_wordpress_automatic_image_cropping');
 
 /** 
  * Add our custom image sizes to WordPress interface so they can be choosable in Admin
  */
 function sn_image_size_names_choose($sizes){
     return array_merge($sizes, array(
-		'wysiwyg_large' => __('Standard', 'latimpe'),
+		'wysiwyg_large' => __('Standard', 'sn'),
 	));
 }
-
-add_action('init', 'sn_unset_wordpress_automatic_image_cropping');
 add_filter('image_size_names_choose', 'sn_image_size_names_choose');
