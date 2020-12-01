@@ -1,0 +1,116 @@
+######### .gitignore Studio Netting v.1.0.0 #########
+# --------------------------------------
+# INITIAL COMMIT
+# git init .
+# git add . --all
+# git commit -m "initial commit"
+#
+# START TRACKING UNTRACKED FILES
+# git rm -r --cached .
+# git add .
+# git commit -m 'update of tracking'
+# --------------------------------------
+
+# ignore custom file types/compilers
+*~
+*.bak
+*.swp
+.DS_Store
+.svn
+.cvs
+.htaccess
+Thumbs.db
+ehthumbs.db
+prepros-6.config
+
+# ignore wpengine specific files
+.smushit-status
+.gitattributes
+_wpeprivate
+/wp-content/mu-plugins
+/wp-content/object-cache.php
+/wp-content/mysql.sql
+
+# ignore wordpress caching and backups folders and files
+/wp-content/blogs.dir/
+/wp-content/backup-db/*
+/wp-content/advanced-cache.php
+/wp-content/wp-cache-config.php
+/wp-content/cache/*
+/wp-content/cache/supercache/*
+
+# ignore wordpress core folders and files
+/wp-admin
+/wp-includes
+/wp-content/index.php
+/wp-content/themes/index.php
+/wp-content/themes/twenty*
+/wp-content/uploads/*
+/wp-content/upgrade/*
+/wp-content/languages/*
+/*.php
+/*.txt
+/*.html
+
+# ignore all files and folders in plugins folder except website specific files
+!wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/YOURPLUGIN
+!readme.txt
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore large file types
+*.hqx
+*.bin
+*.exe
+*.dll
+*.deb
+*.dmg
+*.iso
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mp4
+*.mpeg
+*.mpg
+*.mov
+*.webm
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi
