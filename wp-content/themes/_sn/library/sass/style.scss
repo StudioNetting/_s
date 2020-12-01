@@ -1,13 +1,11 @@
 /*!
 Theme Name: Studio Netting Starter Theme
-Theme URI: http://underscores.me/
+Theme URI: http://studionetting.no
 Author: Studio Netting
-Author URI: http://underscores.me/
+Author URI: http://studionetting.no
 Description: Description
-Version: 0.0.1
-License: TODO
-License URI: TODO
-Text Domain: snst
+Version: 1.1
+Text Domain: sn
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
@@ -20,9 +18,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "normalize";
 
 /*********************
+IMPORTING ABSTRACTS
+
+These files are meant to be just helpers which don’t output any CSS when compiled.
+*********************/
+
+@import "abstracts/fonts";
+@import "abstracts/mixins";
+
+
+/*********************
 IMPORTING ATOMS
 
-TODO - må beskrives
+Atoms are the basic building blocks of the project. 
 *********************/
 
 @import "atoms/accessibility";
@@ -32,13 +40,12 @@ TODO - må beskrives
 @import "atoms/images";
 @import "atoms/links";
 @import "atoms/typography";
-@import "atoms/typography";
 
 
 /*********************
 IMPORTING MOLECULES
 
-TODO - må beskrives
+Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound.
 *********************/
 
 @import "molecules/background-colors";
@@ -52,7 +59,6 @@ TODO - må beskrives
 IMPORTING ORGANISMS
 
 Organisms are reusable blocks or elements we use throughout the project.
-
 *********************/
 
 @import "organisms/featured-post";
@@ -63,7 +69,7 @@ Organisms are reusable blocks or elements we use throughout the project.
 /*********************
 IMPORTING TEMPLATES
 
-TODO - må beskrives
+Templates consist mostly of groups of organisms stitched together to form pages.
 *********************/
 
 @import "templates/404";
@@ -71,12 +77,3 @@ TODO - må beskrives
 @import "templates/page";
 @import "templates/single";
 @import "templates/front-page"; //must be after page since the front page is also a page
-
-/*********************
-IMPORTING ABSTRACTS
-
-TODO - må beskrives
-*********************/
-
-@import "abstracts/fonts";
-@import "abstracts/mixins";
