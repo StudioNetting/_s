@@ -11,77 +11,71 @@
 # git commit -m 'update of tracking'
 # --------------------------------------
 
-# ignore custom file types/compilers
 *~
-*.bak
-*.swp
 .DS_Store
 .svn
 .cvs
-.htaccess
+*.bak
+*.swp
 Thumbs.db
-ehthumbs.db
-prepros-6.config
 
-# ignore wpengine specific files
+# wordpress specific
+wp-config.php
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
+wp-content/languages/*
+
+# wpengine specific
 .smushit-status
 .gitattributes
-_wpeprivate
-/wp-content/mu-plugins
-/wp-content/object-cache.php
-/wp-content/mysql.sql
+_wpeprivate*
+wp-content/object-cache.php
+wp-content/mu-plugins/mu-plugin.php
+wp-content/mu-plugins/slt-force-strong-passwords.php
+wp-content/mu-plugins/stop-long-comments.php
+wp-content/mu-plugins/force-strong-passwords*
+wp-content/mu-plugins/wpengine-common*
+wp-content/mysql.sql
 
-# ignore wordpress caching and backups folders and files
-/wp-content/blogs.dir/
-/wp-content/backup-db/*
-/wp-content/advanced-cache.php
-/wp-content/wp-cache-config.php
-/wp-content/cache/*
-/wp-content/cache/supercache/*
-
-# ignore wordpress core folders and files
+# wp core (as of 4.9.5)
+/db-config.php
+/index.php
+/license.txt
+/readme.html
+/wp-activate.php
+/wp-app.php
+/wp-atom.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-commentsrss2.php
+/wp-config-sample.php
+/wp-cron.php
+/wp-feed.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-rdf.php
+/wp-rss.php
+/wp-rss2.php
+/wp-pass.php
+/wp-register.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
 /wp-admin
 /wp-includes
 /wp-content/index.php
-/wp-content/themes/index.php
-/wp-content/themes/twenty*
-/wp-content/uploads/*
-/wp-content/upgrade/*
-/wp-content/languages/*
-/*.php
-/*.txt
-/*.html
 
-# ignore all files and folders in plugins folder except website specific files
-!wp-content/plugins/
-wp-content/plugins/*
-!wp-content/plugins/YOURPLUGIN
-!readme.txt
-
-# ignore log files and databases
-*.log
-*.sql
-*.sqlite
-
-# ignore compiled files
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# ignore packaged files
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-# ignore large file types
+# large/disallowed file types
+# a CDN should be used for these
 *.hqx
 *.bin
 *.exe
@@ -114,3 +108,13 @@ wp-content/plugins/*
 *.asf
 *.wmv
 *.avi
+
+# Studio Netting settings
+.htaccess
+/wp-content/themes/index.php
+/wp-content/plugins/index.php
+!wp-content/plugins/
+/wp-content/plugins/*
+/wp-content/languages/plugins/*
+/wp-content/languages/themes/*
+config.codekit3

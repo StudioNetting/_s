@@ -93,6 +93,27 @@
 		"oAP": "/library/files/template-functions.php",
 		"oF": 0
 		},
+	"/library/files/template-tags.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/library/files/template-tags.php",
+		"oF": 0
+		},
+	"/library/files/theme-admin.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/library/files/theme-admin.php",
+		"oF": 0
+		},
+	"/library/files/theme-images.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/library/files/theme-images.php",
+		"oF": 0
+		},
 	"/library/js/min/navigation-min.js": {
 		"ft": 64,
 		"ma": 0,
