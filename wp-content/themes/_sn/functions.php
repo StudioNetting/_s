@@ -28,21 +28,26 @@ if ( ! function_exists( 'sn_setup' ) ) :
 		add_theme_support( 'automatic-feed-links' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'sn' ),
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Primary', 'sn' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 	}
 endif;
@@ -52,8 +57,8 @@ endif;
  */
 function sn_scripts() {
 	wp_enqueue_style( 'sn-style', get_stylesheet_uri() );
-	
-	wp_enqueue_script("jquery");
+
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'sn-script', get_template_directory_uri() . '/library/js/min/sn-min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'sn-navigation', get_template_directory_uri() . '/library/js/min/navigation-min.js', array(), '20151215', true );
@@ -68,7 +73,6 @@ function sn_scripts() {
 add_action( 'after_setup_theme', 'sn_setup' );
 add_action( 'wp_enqueue_scripts', 'sn_scripts' );
 
-
 /**
  * Require Theme function files
  */
@@ -76,4 +80,3 @@ require get_template_directory() . '/library/files/template-tags.php';
 require get_template_directory() . '/library/files/template-functions.php';
 require get_template_directory() . '/library/files/theme-admin.php';
 require get_template_directory() . '/library/files/theme-images.php';
-
