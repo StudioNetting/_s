@@ -118,3 +118,4 @@ wp-content/mysql.sql
 /wp-content/languages/plugins/*
 /wp-content/languages/themes/*
 config.codekit3
+vendor
