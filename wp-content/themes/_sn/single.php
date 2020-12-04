@@ -7,20 +7,22 @@
  * @package sn
  */
 
-get_header(); ?>
-	
-<?php while ( have_posts() ) : the_post(); ?>
+get_header();
+
+while ( have_posts() ) :
+	the_post();
+	?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header>
 			<h1><?php the_title(); ?></h1>
 			<?php sn_posted_on(); ?>
 		</header>
-	
+
 		<?php the_content(); ?>	
 	</article>
 
-	<?php 
+	<?php
 	the_post_navigation();
 
 	// If comments are open or we have at least one comment, load up the comment template.
@@ -29,7 +31,5 @@ get_header(); ?>
 	endif;
 
 endwhile; // End of the loop.
-?>		
 
-<?php
 get_footer();
