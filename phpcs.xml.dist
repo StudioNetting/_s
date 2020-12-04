@@ -31,7 +31,7 @@
 	<arg name="extensions" value="php"/>
 
 	<!-- Check all files in this directory and the directories below it. -->
-	<file>./wp-content/themes</file>
+	<file>./wp-content/themes/_sn</file>
 
 	<!-- Exclude patterns. -->
 	<exclude-pattern>/vendor/*</exclude-pattern>
@@ -45,7 +45,8 @@
 	-->
 
 	<rule ref="WordPress">
-		<!-- <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" /> -->
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
+		<exclude name="Generic.Commenting.DocComment.ShortNotCapital" />
 	</rule>
 
 	<!--
@@ -58,7 +59,7 @@
 		 Multiple valid text domains can be provided as a comma-delimited list. -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="sn_shop"/>
+			<property name="text_domain" type="array" value="sn"/>
 		</properties>
 	</rule>
 
