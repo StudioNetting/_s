@@ -45,8 +45,7 @@
 	-->
 
 	<rule ref="WordPress">
-		<exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />
-		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
+		<!-- <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" /> -->
 	</rule>
 
 	<!--
