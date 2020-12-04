@@ -21,23 +21,25 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php echo __('Skip to content', 'sn'); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sn' ); ?></a>
 
 		<header id="masthead" class="site-header">
-		
-			<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a>
-	
-			<button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-haspopup="true"><?php echo __('Meny', 'sn'); ?></button>
+
+			<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+
+			<button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-haspopup="true"><?php esc_html_e( 'Meny', 'sn' ); ?></button>
 			<?php
-				wp_nav_menu( array(
-					'menu_class'		=> 'menu',
-					'theme_location' 	=> 'menu-1',
-					'menu_id'        	=> 'primary-menu',
-					'container'			=> 'nav',
-					'container_class'	=> 'responsive-menu',
-				) );
-			?>
-		
+				wp_nav_menu(
+					array(
+						'menu_class'        => 'menu',
+						'theme_location'    => 'menu-1',
+						'menu_id'           => 'primary-menu',
+						'container'         => 'nav',
+						'container_class'   => 'responsive-menu',
+					)
+				);
+				?>
+
 		</header>
 
 	<main>
