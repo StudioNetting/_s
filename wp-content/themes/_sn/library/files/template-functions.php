@@ -29,12 +29,14 @@ function sn_pingback_header() {
 	}
 }
 
-// Simply remove anything that looks like an archive title prefix ("Archive:", "Foo:", "Bar:").
-function sn_the_archive_title($title){
-	return preg_replace('/^\w+: /', '', $title);
+/**
+ *  Simply remove anything that looks like an archive title prefix ("Archive:", "Foo:", "Bar:").
+ */
+function sn_the_archive_title( $title ) {
+	return preg_replace( '/^\w+: /', '', $title );
 }
 
 add_filter( 'body_class', 'sn_body_classes' );
-add_filter('get_the_archive_title', 'sn_the_archive_title');
+add_filter( 'get_the_archive_title', 'sn_the_archive_title' );
 
 add_action( 'wp_head', 'sn_pingback_header' );
