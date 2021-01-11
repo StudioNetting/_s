@@ -47,6 +47,7 @@
 	<rule ref="WordPress">
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
 		<exclude name="Generic.Commenting.DocComment.ShortNotCapital" />
+		<exclude name="WordPress.PHP.YodaConditions.NotYoda" />
 	</rule>
 
 	<!--
