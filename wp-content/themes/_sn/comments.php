@@ -24,12 +24,13 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-			<?php $sn_comment_count = get_comments_number();
-				if ( '1' === $sn_comment_count ) {
-					echo __('Én kommentar på', 'sn'). ' ' .get_the_title();
-				} else {
-					echo $sn_comment_count. ' ' .__('kommentarer', 'sn'); 
-				} 
+			<?php
+			$sn_comment_count = get_comments_number();
+			if ( '1' === $sn_comment_count ) {
+				echo esc_html__( 'Én kommentar på', 'sn' ) . ' ' . esc_html( get_the_title() );
+			} else {
+				echo esc_html( $sn_comment_count ) . ' ' . esc_html__( 'kommentarer', 'sn' );
+			}
 			?>
 		</h2>
 
@@ -37,10 +38,12 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
+			wp_list_comments(
+				array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				)
+			);
 			?>
 		</ol>
 
@@ -48,12 +51,15 @@ if ( post_password_required() ) {
 		the_comments_navigation();
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php echo __( 'Kommentarfeltet er stengt.', 'sn' ); ?></p>
-		<?php endif;
+		if ( ! comments_open() ) :
+			?>
+			<p class="no-comments"><?php esc_html_e( 'Kommentarfeltet er stengt.', 'sn' ); ?></p>
+			<?php
+		endif;
 
 	endif; // Check for have_comments().
 
-	comment_form(); ?>
+	comment_form();
+	?>
 
 </div><!-- #comments -->
