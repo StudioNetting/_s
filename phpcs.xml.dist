@@ -48,6 +48,7 @@
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
 		<exclude name="Generic.Commenting.DocComment.ShortNotCapital" />
 		<exclude name="WordPress.PHP.YodaConditions.NotYoda" />
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
 	</rule>
 
 	<!--
