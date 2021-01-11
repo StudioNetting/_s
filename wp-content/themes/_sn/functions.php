@@ -7,6 +7,8 @@
  * @package sn
  */
 
+define( 'SN_THEME_VERSION', '1.1.0' );
+
 if ( ! function_exists( 'sn_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -53,10 +55,20 @@ if ( ! function_exists( 'sn_setup' ) ) :
 endif;
 
 /**
+ * Set assets version number.
+ *
+ * @return string
+ */
+function assets_version_number() : string {
+
+	return SN_THEME_VERSION . '-' . filemtime( get_stylesheet_directory() . '/style.css' );
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function sn_scripts() {
-	wp_enqueue_style( 'sn-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'sn-style', get_stylesheet_uri(), [], assets_version_number() );
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'sn-script', get_template_directory_uri() . '/library/js/min/sn-min.js', array(), '20151215', true );
